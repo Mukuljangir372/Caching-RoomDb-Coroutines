@@ -20,7 +20,10 @@
 * 
 * 
 * SIDE EFFECTS -> 
-* upcoming...
+* 1. While using cacheNetwork(), don't put your UI work there. If it needs, put it in Ui thread.
+* 2. Don't call cacheNetwork() in activity or fragment. 
+* 3. Always put this in viewModel
+* 4. saveNetworkResult { .. } always calls
 * 
 */
 
