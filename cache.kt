@@ -25,7 +25,17 @@
 * 3. Always put this in viewModel
 * 4. saveNetworkResult { .. } always calls
 * 5. Return type of networkcall function always should be Resource<*>
+*    and don't take up as Resource.Loading<*>
+* 6. Don't put your networkCall in seperate thread. As we already using coroutine.
+* 7. Don't put unnessary jobs or launches inside these cache blocks
+* 8. Don't put delay in these cache blocks
+* 9. Calling defaultScope.cancel() until you are confident that your all jobs inside this scope is finished
+     or until you need.
 * 
+*
+* CUSTOMIZE ->
+* 1. You can put your own CoroutineScope inside cacheNetwork.
+* 2. It's always better to use your own scope.
 */
 
 object Cache {
