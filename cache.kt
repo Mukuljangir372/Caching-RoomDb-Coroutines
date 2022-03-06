@@ -24,6 +24,7 @@
 * 2. Don't call cacheNetwork() in activity or fragment. 
 * 3. Always put this in viewModel
 * 4. saveNetworkResult { .. } always calls
+* 5. Return type of networkcall function always should be Resource<*>
 * 
 */
 
