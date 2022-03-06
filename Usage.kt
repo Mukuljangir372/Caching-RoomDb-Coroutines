@@ -2,8 +2,8 @@
 
 /**
 * 
-* How to use cache network call?
-*
+* How to use ? How to cache network call?
+* Example -> from DummyViewModel.kt
 */
 suspend fun viewTicket2(ticketId: Int) = cacheNetwork(
        localQuery = {
@@ -25,6 +25,7 @@ suspend fun viewTicket2(ticketId: Int) = cacheNetwork(
 
 /**
 * Colleting cache data 
+* Example -> from DummyClass.kt
 */
 
 class Usage{
